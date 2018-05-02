@@ -1,0 +1,137 @@
+		* { margin: 0; padding: 0; }
+		body { background: #efefef; margin: 0; }
+		a { color: inherit; text-decoration: none; }
+		ul,ol{ list-style: none; }
+		h1,h2,h3,h4{ font-weight: normal; }
+		[data-x].offset{
+			transform:translateY(100px);
+		}
+		[data-x].active{
+  outline: 10px solid red;
+}
+		[data-x]{
+			transition: all 0.5s;
+			transform: translateY(0);
+		}
+		.clearfix::after { content: ''; display: block; clear: both; }
+		.topNavBar { padding: 20px 0px 20px 0px; position: fixed; top:0; left: 0; width: 100%;transition: all 0.5s;color:#b7b7b7;}
+		.topNavBar.sticky{background: white;padding: 10px 0;color:inherit;z-index: 1;box-shadow:0 0 10px rgba(0,0,0,0.25);color:#3d4451;} 
+		.topNavBar-inner  .logo{ font-size: 24px; font-family: "Arial Black"; padding-top:3px; padding-bottom: 4px; cursor: pointer; }
+		.topNavBar-inner{ padding: 0 16px; }
+		.topNavBar-inner  .logo .rs { margin-right: 4px; color: #e6686a; }
+		.topNavBar-inner .logo .card { color: #9a9da2; }
+		.topNavBar-inner  > nav{ float: right; padding-top: 7px; }
+		.topNavBar-inner  > nav > ul { list-style: none; margin: 0; padding: 0; }
+		.topNavBar-inner > nav > ul > li { float: left; margin-left: 17px; margin-right: 17px;position: relative;}
+		.topNavBar-inner > nav > ul > li > a { font-size: 12px; color:inherit; font-weight: bold; border-top: 3px solid transparent; border-bottom: 3px solid transparent; padding-top: 5px; padding-bottom: 5px; display: block;position: relative;}
+		.topNavBar-inner > nav > ul > li.active > a::after,
+		.topNavBar-inner > nav > ul > li.heightlight > a::after
+		{
+			content:'';
+			display: block;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			background: #e06567;
+			height: 3px;
+			animation:menuSlide .5s;
+		 }
+		 @keyframes menuSlide{
+			 0%{width: 0;}
+			 100%{width: 100%;}
+		 }
+		.topNavBar .submenu{
+			display: none;
+			position: absolute;
+			top: 100%;
+			right: 0;
+			background: white;
+			color:#3d4451;
+		}
+		.topNavBar .submenu >li{
+			white-space: nowrap;
+			padding: 5px 10px;
+			transition: all 0.3s;
+		}
+		.topNavBar li.active .submenu{
+			display: block;
+			animation:submenuSlide .5s;
+		}
+		@keyframes submenuSlide{
+			0%{
+				margin-right: 100%;
+			}
+			100%{
+				margin-right: 0;
+			}
+		}
+		.banner{ height: 515px; background-image: url(./img/1.jpg); background-position: center center; background-size: cover; }
+		.mask{ height: 515px; background-color: rgba(0,0,0,0.8); }	
+ 		.userCard{ box-shadow:0px 1px 5px 0px rgba(0,0,0,0.5); max-width: 940px; margin-left: auto; margin-right: auto; background-color: #efefef;
+		}
+		.userCard .welcome{ background:#E6686A; color: white; display: inline-block; padding: 4px 16px; position: relative; margin-bottom: 10px; }
+		.userCard .welcome .triangle{ display: block; border:10px solid transparent; width:0px; border-left-color: #E6686A; border-top-width: 0px; position: absolute; top: 100%; left: 4px; }
+		.userCard .picture{float: left;}
+		.userCard .text{ float: left; width: 370px; margin-left: 55px; }
+		.userCard .text h1{ margin-top: 26px; }
+		.userCard .pictureAndText{ padding: 50px; }
+		hr{ height: 0; border: none; border-top: 1px solid #DEDEDE; }
+		.text hr { margin: 20px 0; }
+		.userCard dl dt, .userCard dl dd{ float: left; padding: 5px 0; }
+		.userCard dl dt{ width: 30%; font-weight: bold; }
+		.userCard dl dd{ width: 70%; color: #9da0a7; }
+		.media{ background-color:#E6686A; text-align: center; }
+		.media > a{ display: inline-block; line-height:30px; padding: 5px 0; width: 40px; border-radius:50%; margin: 16px 16px; }
+		.media> a:hover{ background-color: #cf5d5f; }
+		.userCard svg{ width: 30px; height: 30px; fill:white; vertical-align: top; }
+		.downloadtxt{ display: inline-block; border:1px solid #CDCFD1; line-height: 16px; background: #EFEFEF; color: #3c4451; font-size: 14px; font-weight: bold; padding:   21px 15px; border-radius:2px; margin: 32px 0; transition:box-shadow 0.2s; }
+		 .downloadtxt:hover{ box-shadow: 0px 4px 13px 2px rgba(0,0,0,0.5); } 
+		.selfIntroduction{ max-width: 940px; margin-left: auto; margin-right: auto; text-align: center; font-family:KaiTi; line-height: 1.8; }
+		section.skills,
+		section.portfolio{ max-width: 720px; margin-left: auto; margin-top: 60px; margin-right: auto; } 
+
+
+		section.skills > h2,section.messageList>h2,
+		section.portfolio > h2 { text-align: center; color:#3d4451; font-size: 34px; line-height: 1.2; font-weight: 600; }
+		section.skills h3{ font-size: 14px; line-height:1.1 ; padding-right: 40px; }		
+		section.skills > ol{ margin-top: 30px; background: white; padding: 42px 50px 10px; box-shadow: 0px 4px 13px 2px rgba(0,0,0,0.5); }
+		section.skills > ol > li{ float: left; width: 50%; padding-right: 10px; box-sizing: border-box; }
+		section.skills .progressBar{ height: 5px; background: #FAE1E1; border-radius: 2px; margin: 4px 0 40px; overflow: hidden;}
+		section.skills .progressBar .progress{ background: #E6686A; width: 70%; height: 100%; border-radius: 2px;transform:translateX(0); transition: all 1s;} 
+		section.skills.offset .progress{
+			transform: translateX(-100%);
+		}
+		section.portfolio { text-align: center; margin-bottom: 100px; max-width: 720px;position: relative;} 
+		section.portfolio h2{ margin-bottom: 32px; } 
+		section.portfolio .swiper-container { width: 668px; height: 501px; position:static}
+		section.portfolio .swiper-wrapper{
+			position:static
+		}
+		section.portfolio .swiper-button-prev, 
+		section.portfolio .swiper-button-next{
+		  background-color: white;
+		  width: 64px;
+		  height: 64px;
+		  right: 100%;
+		  left: auto;
+		  border-radius: 50%;
+		  }
+		section.portfolio .swiper-button-next{ left: 100%;right: auto; }
+
+		section.messageList >ol{
+			max-width: 700px;
+			border:1px solid #ECECEC;
+			margin: 0 auto;
+		}
+		section.messageList >ol > li{
+			padding: 16px;
+			border-bottom: 1px solid #DDD;
+		}
+		
+
+		.loading{ width: 200px; height: 200px; position: relative; } 
+		.loading::before,.loading::after{ content:''; position: absolute; width: 0px; height: 0px; background: black; border-radius: 50%; top: 0px; left: 0px; bottom: 0px; right: 0px; margin: auto; animation:s 1.5s linear infinite; }
+ 		.loading::after{ animation-delay:0.75s; } 
+		@keyframes s{ 0%{ width: 0;height: 0;opacity: 1; } 100%{ width: 100px; height: 100px; opacity: 0; } }
+
