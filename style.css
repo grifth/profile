@@ -78,7 +78,8 @@
 		.userCard .pictureAndText{ padding: 50px; }
 		hr{ height: 0; border: none; border-top: 1px solid #DEDEDE; }
 		.text hr { margin: 20px 0; }
-		.userCard dl dt, .userCard dl dd{ float: left; padding: 5px 0; }
+		.userCard dl dt{float: left; width: 200px; font-weight: bold;margin: 9px 0; } 
+		.userCard dl dd{    float: left; /* padding: 3px 0; */ line-height: 26px; height: 26px; color: rgb(157, 160, 167); width: 100px; margin: 9px 0; } 
 		.userCard dl dt{ width: 30%; font-weight: bold; }
 		.userCard dl dd{ width: 70%; color: #9da0a7; }
 		.media{ background-color:#E6686A; text-align: center; }
