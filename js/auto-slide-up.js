@@ -37,8 +37,6 @@
     for (let i = 0; i < liTags.length; i++) {
         liTags[i].onmouseenter = function(x) {
             let li = x.currentTarget;
-            console.log(3);
-
             li.classList.add('active');
         }
         liTags[i].onmouseleave = function(x) {

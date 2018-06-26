@@ -39,8 +39,11 @@
           x.preventDefault()
           let a = x.currentTarget
           let href = a.getAttribute('href') //'#siteAbout'
-          let element = document.querySelector(href)
-          this.scrollToElement(element)
+          if(href!=="https://i.cnblogs.com/EditArticles.aspx"){
+               let element = document.querySelector(href)
+               this.scrollToElement(element)
+          }          
+
         }
       }
     },
