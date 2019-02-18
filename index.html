@@ -1,213 +1,203 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>在线简历</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="https://at.alicdn.com/t/font_605878_kie59hjj1iuul3di.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
-<!-- 存储服务 -->
-<script src="//cdn1.lncld.net/static/js/3.6.8/av-min.js"></script>
-    <style type="text/css">
-        .icon {
-        width: 1em;
-        height: 1em;
-        vertical-align: -0.15em;
-        fill: currentColor;
-        overflow: hidden;
-        }
-    
-        .site-welcome {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #888;
-        z-index: 1;
-        justify-content: center;
-        align-items: center;
-        }
-    
-        .active {
-            display: flex;
-        }
-    </style>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人简历</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1047817_t69uyxihs2c.css">
+    <style>
+    @font-face {font-family: 'iconfont';
+    src: url('iconfont.eot');
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'),
+    url('iconfont.woff') format('woff'),
+    url('iconfont.ttf') format('truetype'),
+    url('iconfont.svg#iconfont') format('svg');
+    }
 
+    .iconfont{
+    font-family:"iconfont" !important;
+    font-size:30px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+
+}</style>
+</head>
 <body>
-    <div id="topNavBar" class="topNavBar">
-        <div class="topNavBar-inner clearfix">
-            <a href="#" alt="logo" class="logo">
-            <span class="rs">RS</span><span class="card">card</span>
-        </a>
-            <nav class="menu">
-                <ul class="clearfix">
-                    <li><a href="#siteAbout">关于</a></li>
-                    <li><a href="#siteSkills">技能</a></li>
-                    <li class="menuTigger">
-                        <a href="#siteWorks">作品</a>
-                        <ul class="submenu">
-                            <li><a href="https://grifth.github.io/test/demo/nav-demo/" target="_blank">导航</a></li>
-                            <li><a href="https://grifth.github.io/test/demo/canvas" target="_blank">画板</a></li>
-                            <li><a href="https://grifth.github.io/test/jquery/Slide" target="_blank">轮播图</a></li>
-                        </ul>
-                    </li>
-                    <li class="menuTigger"><a href="#">博客</a>
-                        <ul class="submenu">
-                            <li><a href="https://www.cnblogs.com/Griffith/archive/2018/03.html" target="_blank">博客园</a></li>
-                            <li><a href="https://zhuanlan.zhihu.com/c_202015360" target="_blank">知乎</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#messageList">留言板</a></li>
-                    <li><a href="#">联系方式</a></li>
-                    <li><a href="#">其他</a></li>
+    <div class="layout clearfix">
+        <!-- aside -->
+        <aside>
+            <h1><a href="">个人简历</a><div class="menu"></div></h1>
+            <div class="aside-info">
+                <ul id="nav" class="nav">
+                    <li><a href="#">个人 <small>About me</small></a></li>
+                    <li><a href="#">项目 <small>Portfolio</small></a></li>
+                    <li><a href="#">技能 <small>Technology stack</small></a></li>
+                    <li><a href="#">联系 <small>Contact</small> </a></li>
                 </ul>
-            </nav>
-        </div>
-    </div>
-    <div class="banner">
-        <div class="mask"></div>
-    </div>
-    <main style="margin-top:-140px;">
-        <!-- -->
-        <div data-x id="siteAbout" class="userCard">
-            <div class="pictureAndText clearfix">
-                <div class="picture">
-                    <img src="./img/dog.jpg" width=350 height=347 alt="头像">
+                <div class="download">
+                    <a href="./resume.pdf" download>PDF下载</a>
                 </div>
-                <div class="text">
-                    <span class="welcome">Hello
-                <span class="triangle"></span>
-                    </span>
-                    <h1>林伟</h1>
-                    <p>前端</p>
-                    <hr>
-                    <dl>
-                        <dt>年龄</dt>
-                        <dd>23</dd>
-                        <dt>城市</dt>
-                        <dd>北京</dd>
-                        <dt>邮箱</dt>
-                        <dd>ringway1995@gmail.com</dd>
-                    </dl>
-                </div>
+
             </div>
-            <footer class="media">
-                <a href="https://github.com/grifth" target="_blank">
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-github"></use>
-                    </svg>
-                </a>
-                <a href="#">
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-049jiandanbianli"></ use>
-                    </svg>
-                </a>
-                <a href="#">
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-tuitetwitter43"></use>
-                    </svg>
-                </a>
-            </footer>
-        </div>
-        <p style="text-align:center;">
-            <a class="downloadtxt" href="./img/1.txt" target="_blank" download>下载 PDF 简历</a>
-        </p>
-        <p class="selfIntroduction">
-            林伟 前端菜鸟
-            <br> 技能：熟悉html.css,javascript.
-            了解jquery常用api,node.js,vue.js
-            <br>
-            能独立完成静态页面和交互效果 
-        </p>
-        <section data-x id="siteSkills" class="skills">
-            <h2>技能</h2>
-            <ol class="clearfix">
-                <li>
-                    <h3>HTML 5 &amp; CSS 3
-            <div class="progressBar">
-                <div class="progress"></div>
+        </aside>
+        <!-- aside end -->
+        <!-- aboutme -->
+        <section class="content aboutme active">
+            <div class="head">
+                <a href="" class="avatar"><img src="images/avatar.jpg" alt=""></a>
+                <h1>林伟</h1>
             </div>
-            </h3>
-                </li>
-                <li>
-                    <h3>javascript
-            <div class="progressBar">
-                <div class="progress"></div>
+            <div class="description">
+                <p>24岁</p>
+                <p>学历：高中</p>
+                <p>城市：北京</p>
+                <p>求职岗位：前端工程师</p>
             </div>
-            </h3>
-                </li>
-                <li>
-                    <h3>jquery
-            <div class="progressBar">
-                <div class="progress"></div>
-            </div>
-            </h3>
-                </li>
-                <li>
-                    <h3>vue
-            <div class="progressBar">
-                <div class="progress"></div>
-            </div>
-            </h3>
-                </li>
-                <li>
-                    <h3>react
-            <div class="progressBar">
-                <div class="progress"></div>
-            </div>
-            </h3>
-                </li>
-                <li>
-                    <h3>node
-            <div class="progressBar">
-                <div class="progress"></div>
-            </div>
-            </h3>
-                </li>
-            </ol>
+            
         </section>
-        <section data-x id="siteWorks" class="portfolio">
-            <h2>作品集</h2>
-            <div id="mySlides">
-                <div class="swiper-container">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <img src="./img/works/nav-page.jpg" class="swiper-slide">
-                        <img src="./img/works/canvas.jpg" class="swiper-slide">
-                        <img src="./img/works/apple-style-slides.jpg" class="     swiper-slide">
+        <!-- aboutme end -->
+        <!-- portfolio -->
+        <section class="content portfolio">
+            <h2>
+                Portfolio
+            </h2>
+            <div class="item">
+                <h3>网易云音乐(手机端)</h3>
+                <div class="picture netEase">
+                    <a href="https://grifth.github.io/163music/"><img src="images/163.jpg" alt=""></a>
+                </div>
+                
+                <div class="describe">
+                    <p>
+                        手机端网易云音乐，具备播放、暂停的功能，使用leancloud作为数据库
+                    </p>
+                    <p>技术栈：JQuery + BOM + MVC + Leancloud + EventHub 
+                    </p>
+                </div>
+                <div class="link">
+                    <div class="link-item">
+                        <a class="github" href="https://grifth.github.io/163music/" target="_blank">在线查看</a>
+                        <a class="github" href="https://github.com/grifth/163music" target="_blank">Github</a>
                     </div>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
-                    <!-- If we need navigation buttons -->
+                    
+                    
                 </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+            </div>
+            <div class="item">
+                <h3>手机端豆瓣电影</h3>
+                <a href="https://grifth.github.io/douban/"><img src="images/douban.jpg" alt=""></a>
+                <div class="describe">
+                    <p>利用豆瓣提供的免费API完成，可以获取豆瓣电影Top250的电影以及搜索电影的功能</p>
+
+                    <p>技术栈：Jquery + MVC + ES6 + EventHub </p> 
+                    
+                </div>
+                <div class="link">
+                    <div class="link-item">
+                        <a class="github" href="https://grifth.github.io/douban/" target="_blank">在线查看</a>
+                        <a class="github" href="https://github.com/grifth/douban" target="_blank">Github</a>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="item">
+                <h3>响应式页面Lazyload应用</h3>
+                <a href="//plainnany.github.io/responsive/index.html"><img src="images/2.png" alt=""></a>
+                <div class="describe">
+                    
+                    <p>使用原生JS实现懒加载、自动加载、预加载、自动轮播、tab切换，使用媒体查询、Flex 布局构建响应式页面</p>
+                    <p>技术栈：原生JS+ npm + ES6 + git + http-server</p>
+                </div>
+                <div class="link">
+                    <div class="link-icon">
+                        <svg class="icon icon-es6"><use xlink:href="#icon-js"></use></svg>
+                        <svg class="icon icon-music"><use xlink:href="#icon-node"></use></svg>
+                        <svg class="icon icon-jquery"><use xlink:href="#icon-es6"></use></svg>
+                        <svg class="icon icon-git"><use xlink:href="#icon-git"></use></svg>
+                        <svg class="icon icon-load"><use xlink:href="#icon-load"></use></svg>
+                        
+                    </div>
+                    <div class="link-item">
+                        <a class="github" href="//plainnany.github.io/responsive/index.html" target="_blank">在线查看</a>
+                        <a class="github" href="//github.com/plainnany/responsive" target="_blank">Github</a>
+                    </div>
+                </div>
+            </div> -->
+            <div class="item">
+                <h3>简易音乐播放器</h3>
+                <a href="https://grifth.github.io/audioPlayer/"><img src="images/music.jpg" alt=""></a>
+                <div class="describe">
+                    <p>使用jQuery Ajax获取音乐信息.有暂停播放，上下曲目,拖动播放条快进的功能
+                    </p>
+                    <p>技术栈：JQuery + iconfont + ES6</p>
+                </div>
+                <div class="link">
+                    <div class="link-item">
+                        <a class="github" href="https://grifth.github.io/audioPlayer/" target="_blank">在线查看</a>
+                        <a class="github" href="https://github.com/grifth/audioPlayer" target="_blank">Github</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <h3>在线键盘导航</h3>
+                <a href="https://grifth.github.io/keyBoard-Nav/"><img src="images/keyBoardNav.jpg" alt=""></a>
+                <div class="describe">
+                    <p>一个优美快捷的个人导航页，附加主流搜索引擎搜索功能
+                        为键盘上的 26 个字母绑定了导航网址，敲击键盘上的字母可跳转相应网页
+                        可以自定义每个键绑定的导航网址，数据存在本地LocalStorage中
+                        基于原生 JS，键盘按键动态生成，按键样式完全使用CSS3完成
+                        </p>
+                    <p>技术栈：javascript </p> 
+                    
+                </div>
+                <div class="link">
+                    <div class="link-item">
+                        <a class="github" href="https://grifth.github.io/keyBoard-Nav/" target="_blank">在线查看</a>
+                        <a class="github" href="https://github.com/grifth/keyBoard-Nav" target="_blank">Github</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- portfolio end -->
+        <!-- skill -->
+        <section class="content skill">
+            <h2>Skill</h2>
+            <div class="skill-content">
+                <ul>
+                    <li>熟练掌握原生javascript和部分ES6,理解重要概念比如：原型，闭包，作用域链，深拷贝等</li>
+                    <li>
+                        掌握常用的HTML标签，理解语义化标签，DOM结构和操作，熟悉标准DOM事件流。掌握CSS核心概念概念如块级和行内元素,盒模型，文档流，浮动和定位，flex布局。
+                     </li>
+                    <li>3能够完成界面整洁，交互友好的页面，高度还原UI视觉稿</li>
+                    <li>熟练使用jquery常用API，能够使用jQuery进行DOM操作，制作轮播等。/li>
+                </ul>
+                <ul>
+                    
+                    <li>熟悉 HTTP 协议，了解 HTTP 请求、响应的定义，
+                    <li>熟悉CORS、JSONP等常见的跨域方式以及其原理</li>
+                    <li>追求良好的代码规范</li>
+                </ul>
+            
             </div>
         </section>
-    </main>
-    <section  class="messageList">
-        <h2>留言</h2>
-        <ol id="messageList">
-        </ol>
-        <form  id="postMessageForm" style="width:700px; margin:50px auto;">
-            <label for="">姓名</label>
-            <input type="text" name="name" required minlength="2" maxlength="10">
-            <label for="">内容</label>
-            <input type="text" name="content" required minlength="2" maxlength="10">
-            <input type="submit" name="submit">
-        </form>
-    </section>
+        <!-- skill end -->
+        <!-- contact -->
+        <section class="content contact">
+            <h2>contact</h2>
+            <p><svg><use xlink:href="#icon-ico04"></use></svg>ringway1995@gmail.com</p>
+            <!-- <p><svg><use xlink:href="#icon-QQ"></use></svg></p> -->
+            <p><svg><use xlink:href="#icon-phone"></use></svg>17600597719</p>
+            <p><i class="iconfont icon-weixin"></i> RingWayz</p> 
+            <p><i class="iconfont icon-git"></i><a href="https://github.com/grifth"> Github</a></p>     
+        </section>
+        <!-- contact end -->
+    </div>
+    <script src="//at.alicdn.com/t/font_347706_c5zc8wknowobhuxr.js"></script>
+    <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="script.js"></script>
 </body>
-<script src="./js/av.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
-<script src="./js/init-swiper.js"></script>
-<script src="./js/auto-slide-up.js"></script>
-<script src="./js/smoothly-navigation.js"></script>
-<script src="./js/sticky-topbar.js"></script>
 </html>
