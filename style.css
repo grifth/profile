@@ -461,3 +461,29 @@ section.contact p:nth-child(2) svg{
     background-position: top;
     background-size: cover;
 } */
+
+#QBcode{
+    position: relative;
+}
+/* #QBcode::after{
+    display: block;
+    content: '';
+    background: url('./images/QBcode.jpg');
+    width: 400px;
+    position: absolute;
+    left: 100%;
+    bottom: 100%;
+} */
+.QBcode::after {
+    display: none;
+    content: '';
+    background: url(./images/QBcode.jpg) 100%/cover;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 120%;
+    bottom: -170%;
+}
+.QBcode:hover::after{
+    display: block;
+}
